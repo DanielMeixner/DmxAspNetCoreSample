@@ -11,6 +11,6 @@ param($websiteName, $packOutput)
                  'Username'=$website.PublishingUsername;
                  'Password'=$website.PublishingPassword}
 
- $publishScript = "${env:ProgramFiles(x86)}\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Web Tools\Publish\Scripts\default-publish.ps1"
+ $publishScript = "default-publish.ps1"
 
  . $publishScript -publishProperties $publishProperties  -packOutput $packOutput
