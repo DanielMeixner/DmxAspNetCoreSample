@@ -11,6 +11,6 @@ param($websiteName, $packOutput)
                  'Username'=$website.PublishingUsername;
                  'Password'=$website.PublishingPassword}
 
- $publishScript = "$(System.DefaultWorkingDirectory)/CIHosted/deployscript/default-publish.ps1"
+ $publishScript = "./default-publish.ps1"
 
- . $publishScript -publishProperties $publishProperties  -packOutput $packOutput
+ $publishScript -publishProperties $publishProperties  -packOutput $packOutput
